@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin</title>
+</head>
+<body>
+    
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">
+                  Name
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Phone
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Email
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Website
+              </th>
+              <th scope="col" class="px-6 py-3">
+                business name
+            </th>
+            <th scope="col" class="px-6 py-3">
+              Datetime
+          </th>
+          </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+          <tr class="bg-white dark:bg-gray-800">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{ row.Name}}
+              </th>
+              <td class="px-6 py-4">
+                {{ row.Phone}}
+              </td>
+              <td class="px-6 py-4">
+                {{ row.Email}}
+              </td>
+              <td class="px-6 py-4">
+                {{ row.Website}}
+              </td>
+              <td class="px-6 py-4">
+                {{ row.Brand}}
+              </td>
+              <td class="px-6 py-4">
+                {{ row.Datetime}}
+              </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+</div>
+</body>
+</html>
